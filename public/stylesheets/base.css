@@ -1,0 +1,93 @@
+.bodyStyle {
+    max-width: 1000px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.test {
+    color: red;
+}
+
+.psk-banner {
+    border-radius: 15px;
+    margin-top: 35px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.psk-banner-post {
+    border-radius: 15px;
+    margin-top: 35px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.psk-post-body-text{
+    font-size: 16px;
+}
+
+.psk-banner-container {
+  position: relative;
+    margin-bottom: 30px;
+}
+
+.psk-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.psk-banner-container:hover .psk-banner-overlay {
+    height: 80%;
+    width: 90%;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 3%;
+  background-color: rgba(255,255,255, 0.7);
+    
+}
+
+.psk-banner-container:hover .psk-banner {
+  filter: blur(5px);
+}
+
+.psk-banner-sp-text{
+    color: #bd2031;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.psk-banner-header-text{
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.psk-banner-text {
+  white-space: nowrap; 
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.psk-event-bold{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #bd2031;
+}
+
+.psk-event-main-block{
+    margin-left: 30px;
+    margin-right: 15px;
+}

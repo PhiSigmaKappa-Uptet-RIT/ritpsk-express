@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PSK Events</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Linking out style sheet here -->
+    <link rel="stylesheet" href="./stylesheets/base.css" type="text/css">
+    <script type="text/javascript" src="./javascript/main.js"></script>
+</head>
+<body class="bodyStyle container">
+<div class="psk-banner-container">
+    <img class="psk-banner" src="./images/banner.jpg">
+    <div class="psk-banner-overlay">
+        <div class="psk-banner-text">
+            <span class="psk-banner-header-text">Welcome to <span class="psk-banner-sp-text">PSK</span>@RIT Events Page</span>
+            <br/>
+            <p>
+                Here you can reserve and purchase tickets for our upcoming events
+            </p>
+        </div>
+    </div>
+</div>
+<div>
+    <h2>#{message}</h2>
+</div>
+<!--<div>-->
+    <!--<p>-->
+        <!--No Current Events, please watch our Facebook Page for more information.-->
+    <!--</p>-->
+<!--</div>-->
+<!--   Below is the Cornhole Template   -->
+<div class="" id="eventBody">
+    <div class="well">
+        <div class="page-header">
+            <img class="psk-banner panel panel-default" src="./images/corn-hole.jpg" />
+            <h1 class="psk-event-bold"><strong>Phi Sig's Cornhole Classic</strong></h1>
+            <small>
+                An afternoon proving your skill at a legendary yard game. . .
+            </small>
+        </div>
+        <br/>
+        <div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div>
+                                <h4 class="psk-event-bold">Description</h4>
+                                <div class="psk-event-main-block">
+                                    The Brothers of Phi Sigma Kappa invite all students to test their skills in the legendary yard game known as cornhole. Teams (co-ed and same sex teams will compete together) will compete against each other to determine the best team. Register online or in person on the day of the event. Registering online is $8 per team, registration at the event is $10 per team. $200 in prizes for 1st, 2nd, and 3rd place. Some proceeds will go to benefit Special Olympics NY!
+                                    <br/>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div>
+                                <h4 class="psk-event-bold">When</h4>
+                                <div class="psk-event-main-block">
+                                    <h4>Saturday - September, 23th</h4>
+                                    <ul>
+                                        <li><strong>9:00 - 10:00 am:</strong> Same day registration</li>
+                                        <li><strong>9:00 - 10:45 am:</strong> Team check-in</li>
+                                        <li><strong>11:00 am:</strong> Bags Fly</li>
+                                    </ul>
+                                </div>
+                                <h4 class="psk-event-bold">Where</h4>
+                                <div class="psk-event-main-block">
+                                    <h4>RIT Greek Lawn</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div>
+                            <h4 class="psk-event-bold">Prizes</h4>
+                            <div class="psk-event-main-block">
+                                <ul>
+                                    <li><strong>1st</strong> - $100 in Amazon Gift Cards (2x$50)</li>
+                                    <li><strong>2nd</strong> - $60 in Amazon Gift Cards (2x$30)</li>
+                                    <li><strong>3rd</strong> - $40 in Amazon Gift Cards (2x$20)</li>
+                                </ul>
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div>
+                            <h4 class="psk-event-bold">Cost</h4>
+                            <div class="psk-event-main-block">
+                                <ul>
+                                    <li><strong>$8 per Team:</strong> Online Registration</li>
+                                    <li><strong>$10 Per Team:</strong> Same Day Registration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div>
+                    <h3 class="psk-event-bold">Sign-up</h3>
+                    <div>
+                    </div>
+                    <div>
+                        <form class="psk-form-body" method="post" action="/event-submit">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="temName">Team Name:</span>
+                                        <input type="text" class="form-control" aria-describedby="basic-addon1" required id="teamName" name="teamName">
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="teamMem1">Team Member 1:</span>
+                                        <input type="text" class="form-control" aria-describedby="basic-addon2" required id="teamMember1" name="teamMember1">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="teamMem2">Team Member 2:</span>
+                                        <input type="text" class="form-control" aria-describedby="basic-addon3" required id="teamMember2" name="teamMember2">
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="userEmail">Contact Email:</span>
+                                        <input type="email" class="form-control" aria-describedby="basic-addon2" required id="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="userPhone">Contact Phone:</span>
+                                        <input type="tel" class="form-control" aria-describedby="basic-addon3" required id="phone" name="phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-2 col-xs-12"><a href="mailto:ritpsk.events@gmail.com" class="btn btn-primary">Contact</a></div>
+                                <div class="col-md-6 col-xs-12"></div>
+                                <div class="col-md-4 col-xs-12">
+                                    <div>
+                                        <button type="submit" id="eventPay" class="btn btn-danger">Pay at Event</button>
+                                        <script
+                                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                                data-key="pk_live_FP6j3K9Tfs7Zyu8zBUefsfPF"
+                                                data-amount="800"
+                                                data-name="Phi Sig Events"
+                                                data-description="PSK Cornhole - Sept 12th - Noon"
+                                                data-zip-code="true"
+                                                data-locale="auto">
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
+</html>
