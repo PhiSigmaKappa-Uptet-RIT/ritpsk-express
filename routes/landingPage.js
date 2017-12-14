@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-const stripe = require("stripe")("sk_live_7XPPRGTzVa4yaHeUvoSMw6tF");
+const stripe = require("stripe")("sk_test_hKNSgTzpFDlKTLxwqBMswNwB");
 let GoogleSpreadsheet = require('google-spreadsheet');
 
 // Create and Deploy Your First Cloud Functions
@@ -57,6 +57,14 @@ router.get('/', function(req, res, next) {
     res.render('landing-page');
 });
 
+router.get('/success-record', function (req, res, next) {
+    res.render('success');
+});
+
+router.get('/error-record', function (req, res, next) {
+    res.render('error');
+});
+
 router.get('/test', function(req, res, next) {
     res.send('working');
 });
@@ -82,6 +90,45 @@ router.post('/event-submit', function (req, res, next) {
             }
         });
     }
+});
+
+router.post('/stripe-pay', function (req, res, next) {
+    let token = req.body.stripeToken; // Using Express
+    // Charge the user's card:
+    let charge = stripe.charges.create({
+        amount: 800,
+        currency: "usd",
+        description: "PSK Cornhole - Sept 13 - Sign-in\n Greek Lawn - Starts at 11:00am",
+        source: token,
+    }, function(err, charge) {
+        if(err){
+            console.error(err);
+            res.status(200).redirect('https://ritpskevents.com/reser/error.html');
+        }
+        else{
+            baseRowObject.TeamName = req.body.teamName;
+            baseRowObject.FirstMember = req.body.teamMember1;
+            baseRowObject.SecondMember = req.body.teamMember2;
+            baseRowObject.Email = req.body.email;
+            baseRowObject.Phone = req.body.phone;
+            baseRowObject.PayMethod = 'Online';
+            baseRowObject.StripeEmail = req.body.stripeEmail;
+            if(charge.id){
+                baseRowObject.StripeCode = charge.id;
+            }
+            else{
+                baseRowObject.StripeCode = 'Error Paying';
+            }
+            recordRow(baseRowObject, function(result){
+                if(result){
+                    res.status(200).redirect('/success-record');
+                }
+                else{
+                    res.status(200).redirect('/error-record');
+                }
+            })
+        }
+    });
 });
 
 let recordRow = function(rowObject, callback){

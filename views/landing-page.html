@@ -15,7 +15,7 @@
 
     <!-- Linking out style sheet here -->
     <link rel="stylesheet" href="./stylesheets/base.css" type="text/css">
-    <script type="text/javascript" src="./javascript/main.js"></script>
+    <script type="text/javascript" src="./javascripts/main.js"></script>
 </head>
 <body class="bodyStyle container">
 <div class="psk-banner-container">
@@ -29,9 +29,6 @@
             </p>
         </div>
     </div>
-</div>
-<div>
-    <h2>#{message}</h2>
 </div>
 <!--<div>-->
     <!--<p>-->
@@ -129,7 +126,7 @@
                     <div>
                     </div>
                     <div>
-                        <form class="psk-form-body" method="post" action="/event-submit">
+                        <form class="psk-form-body" method="post" action="/stripe-pay">
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="input-group">
@@ -175,10 +172,10 @@
                                 <div class="col-md-6 col-xs-12"></div>
                                 <div class="col-md-4 col-xs-12">
                                     <div>
-                                        <button type="submit" id="eventPay" class="btn btn-danger">Pay at Event</button>
+                                        <a id="eventPay" class="btn btn-danger">Pay at Event</a>
                                         <script
                                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                                data-key="pk_live_FP6j3K9Tfs7Zyu8zBUefsfPF"
+                                                data-key="pk_test_QmKPSZYtAFxcX2dxYcYvpZmC"
                                                 data-amount="800"
                                                 data-name="Phi Sig Events"
                                                 data-description="PSK Cornhole - Sept 12th - Noon"

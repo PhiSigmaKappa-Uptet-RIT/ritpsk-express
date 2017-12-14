@@ -29,13 +29,13 @@ $(document).ready(function(){
             postObj['email'] = $("#email").val();
             postObj['phone'] = $("#phone").val();
             console.log(postObj);
-            $.post("https://us-central1-pskeventssite.cloudfunctions.net/eventPay", postObj)
+            $.post("/event-submit", postObj)
                 .done(function(data){
                     if(data.trans){
-                        window.location.href = 'https://ritpskevents.com/reser/success.html';
+                        window.location.href = '/success-record';
                     }
                     else{
-                        window.location.href = 'https://ritpskevents.com/reser/error.html';
+                        window.location.href = '/error-record';
                     }
                 });
         }
